@@ -7,7 +7,7 @@
 <meta name="description" content="⭐ 14 лет опыта. Возврат любимого, снятие порчи, гадание Таро. 980+ отзывов. Первая консультация БЕСПЛАТНО!">
 <meta property="og:title" content="Магистр обрядов — Очищение и защита">
 <meta property="og:description" content="14 лет опыта. 980+ клиентов. Гарантия результата. Бесплатная консультация!">
-<meta property="og:image" content="https://via.placeholder.com/900x600/0a0a0f/10b981?text=Magistr">
+<meta property="og:image" content="https://raw.githubusercontent.com/antomimpuls/gadalka-ministr.online/main/Screenshot_3.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 <script>
 const SITE_SETTINGS = {
@@ -198,7 +198,7 @@ footer{background:#05050a;padding:40px 0;text-align:center;border-top:1px solid 
 </div>
 <div>
 <div class="hero-img">
-<img id="psychicImage" src="https://via.placeholder.com/900x600/0a0a0f/10b981?text=Magistr" alt="Гадалка">
+<img id="psychicImage" src="https://raw.githubusercontent.com/antomimpuls/gadalka-ministr.online/main/Screenshot_3.jpg" alt="Гадалка">
 <div class="magic-particles">
 <div class="particle"></div>
 <div class="particle"></div>
@@ -577,7 +577,6 @@ window.addEventListener('load',()=>{document.querySelectorAll('.card,.testimonia
 window.addEventListener('scroll',animateOnScroll);
 })();
 let currentSlide=0;const totalSlides=10;function initSlider(){const dotsContainer=document.getElementById('sliderDots');for(let i=0;i<totalSlides;i++){const dot=document.createElement('button');dot.className='slider-dot';if(i===0)dot.classList.add('active');dot.onclick=()=>goToSlide(i);dotsContainer.appendChild(dot)}updateSlider()}function moveSlide(direction){currentSlide+=direction;if(currentSlide<0)currentSlide=totalSlides-1;if(currentSlide>=totalSlides)currentSlide=0;updateSlider()}function goToSlide(index){currentSlide=index;updateSlider()}function updateSlider(){const slider=document.getElementById('testimonialSlider');const dots=document.querySelectorAll('.slider-dot');slider.style.transform=`translateX(-${currentSlide*100}%)`;dots.forEach((dot,index)=>{dot.classList.toggle('active',index===currentSlide)})}window.addEventListener('load',()=>{initSlider();const psychicName=SITE_SETTINGS.psychicName||'Мастера Даниловна';const heroName=document.getElementById('heroName');if(heroName){const titleEl=heroName.querySelector('.psychic-name-title');if(titleEl)titleEl.textContent=psychicName}const footerName=document.getElementById('footerName');if(footerName&&psychicName){footerName.textContent=`Мастер энергетической навигации ${psychicName}`}const phoneNum=SITE_SETTINGS.phoneNumber;if(phoneNum){const formatted=formatPhoneNumber(phoneNum);const phoneDisplay=document.getElementById('phoneDisplay');const phoneLink=document.getElementById('phoneLink');if(phoneDisplay)phoneDisplay.textContent=formatted;if(phoneLink)phoneLink.href=`tel:${phoneNum}`}const address=SITE_SETTINGS.address;if(address){const addressDisplay=document.getElementById('addressDisplay');if(addressDisplay)addressDisplay.textContent=address}const psychicImg=document.getElementById('psychicImage');if(psychicImg&&SITE_SETTINGS.psychicImageURL){psychicImg.src=SITE_SETTINGS.psychicImageURL}if(psychicName){document.querySelectorAll('.testimonial p').forEach(p=>{p.innerHTML=p.innerHTML.replace(/\bМастер\b/g,psychicName)})}function updateOnlineCount(){const count=Math.floor(Math.random()*4)+1;const onlineCount=document.getElementById('onlineCount');if(onlineCount){onlineCount.textContent=count;const words=['человек','человека','человека','человека'];onlineCount.parentElement.innerHTML=`Сейчас на сайте: <strong>${count}</strong> ${words[count-1]}`}}updateOnlineCount();setInterval(updateOnlineCount,45000)});setInterval(()=>{moveSlide(1)},8000);
-setTimeout(()=>{const name=SITE_SETTINGS.psychicName;if(name){const variants=[name,`Экстрасенс ${name}`,`Гадалка ${name}`,`Ведунья ${name}`,`Маг ${name}`,name,`${name}`,`Мастер ${name}`,name,`${name}`];let idx=0;document.querySelectorAll('.testimonial p').forEach(p=>{const text=p.innerHTML;p.innerHTML=text.replace(/Мастер/g,()=>variants[idx++%variants.length])})}},100);
 function openPrivacyModal(){document.getElementById('privacyModal').style.display='block';document.body.style.overflow='hidden'}
 function closePrivacyModal(){document.getElementById('privacyModal').style.display='none';document.body.style.overflow='auto'}
 window.onclick=function(e){const modal=document.getElementById('privacyModal');if(e.target==modal){closePrivacyModal()}}
