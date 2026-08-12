@@ -29,7 +29,7 @@ const SITE_SETTINGS = {
   'footerTitle': 'Магистр',
   'metrikaMessengerVisible': false
 };
-const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'';
+const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'Ельвира';
 const PHONE_DIGITS=(SITE_SETTINGS.phoneNumber||'').replace(/\D/g,'');
 const WHATSAPP_MESSAGE=PSYCHIC_NAME ? `Здравствуйте, ${PSYCHIC_NAME}! Хочу обратиться к вам за помощью.` : 'Здравствуйте, хочу обратиться к вам за помощью.';
 const TELEGRAM_MESSAGE=WHATSAPP_MESSAGE;
@@ -894,7 +894,7 @@ const intentTopic = document.getElementById('intentTopic');
 const intentReadyCheckbox = document.getElementById('intentReadyCheckbox');
 const intentTimerHint = document.getElementById('intentTimerHint');
 const intentConfirmBtn = document.getElementById('intentConfirmBtn');
-const footerTitle = SETTINGS.footerTitle || 'Советник';
+const footerTitle = SETTINGS.footerTitle || 'Ельвира';
 const testimonialTemplates = SETTINGS.testimonialTemplates || ['{{NAME}}','Мастер {{NAME}}','Хранитель {{NAME}}','Куратор {{NAME}}','Защитница {{NAME}}'];
 let ageConfirmed = true; // 18+ модалка удалена
 let pendingMessengerType = '';
@@ -1089,7 +1089,7 @@ function setupReveal(){
 }
 
 function setImagesAndTexts(){
-    const psychicName = SETTINGS.psychicName || 'Советник';
+    const psychicName = SETTINGS.psychicName || 'Ельвира';
     const heroName = document.getElementById('heroName');
     if (heroName) {
         const titleEl = heroName.querySelector('.psychic-name-title');
